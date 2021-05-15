@@ -1,6 +1,6 @@
 venv/
-__pychche__/
+__pycache__/
 .idea/
 data/.pytest_cache
+data/__pycache__/
 *.db
-*.db_test
