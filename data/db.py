@@ -33,8 +33,7 @@ class CrudTable:
         if kwargs:
             return session.query(User).filter_by(**kwargs).\
                 order_by(direction("id")).all()
-        else:
-            return session.query(User).order_by(direction("id")).all()
+        return session.query(User).order_by(direction("id")).all()
 
     @staticmethod
     def update_data(
