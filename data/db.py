@@ -36,12 +36,8 @@ class CrudTable:
         return session.query(User).order_by(direction("id")).all()
 
     @staticmethod
-    def update_data(
-            session: sqlalchemy.orm.session.Session,
-            data: Dict[str, str], **kwargs: Union[int, str]
-    ) -> None:
+    def update_data(user: User, data: Dict[str, str]) -> None:
         """Update the data"""
-        user = CrudTable.get_data(session, **kwargs)[0]
         for key, value in data.items():
             setattr(user, key, value)
 

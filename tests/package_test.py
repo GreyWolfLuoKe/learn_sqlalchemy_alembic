@@ -25,7 +25,7 @@ def test_truncate_table():
 
 
 def test_drop_table():
-    CrudTable().drop_table()
+    CrudTable.drop_table()
     assert not CrudTable.table_exists()
 
 
@@ -50,8 +50,8 @@ def test_update_data():
     with Session.begin() as s:
         target = CrudTable().get_data(s, email="new_tom@disney.com")
         assert len(target) == 0
-        item = CrudTable().get_data(s, email="tom@disney.com")[0]
-        CrudTable().update_data(s, new_data, email=item.email)
+        user = CrudTable().get_data(s, email="tom@disney.com")[0]
+        CrudTable().update_data(user, new_data)
     with Session.begin() as s:
         target = CrudTable().get_data(s, email="new_tom@disney.com")
         assert len(target) == 1
