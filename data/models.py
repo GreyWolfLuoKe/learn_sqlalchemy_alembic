@@ -12,5 +12,5 @@ class User(Base):
     email = Column(String, nullable=False)
 
     def __repr__(self):
-        return "<%s('%s', '%s')>" \
+        return "<%s(user_name='%s', email='%s')>" \
                % (self.__class__.__qualname__, self.user_name, self.email)
