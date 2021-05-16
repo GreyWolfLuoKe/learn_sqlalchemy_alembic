@@ -4,7 +4,7 @@
 
    `pip install -r requirements.txt`
    
-3. Go to the project_test folder, then:
+3. Go to the tests folder, then:
 
     `(venv) $ pytest`
     
