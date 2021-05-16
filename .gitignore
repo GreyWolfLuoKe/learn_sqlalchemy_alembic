@@ -3,4 +3,5 @@ __pycache__/
 .idea/
 tests/.pytest_cache/
 data/__pycache__/
+alembic/
 *.db
